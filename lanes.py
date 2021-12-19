@@ -82,6 +82,7 @@ axes[0].set_title('Training set')
 axes[1].hist(y_valid, bins=num_bins, width=0.05, color='red')
 axes[1].set_title('Validation set')
 
+#zoom image
 
 def zoom(image):
   zoom = iaa.Affine(scale=(1, 1.3))
@@ -134,7 +135,7 @@ axs[0].set_title('Original Image')
 axs[1].imshow(brightness_altered_image)
 axs[1].set_title('Brightness altered image ')
 
-
+# steering angle 
 def img_random_flip(image, steering_angle):
     image = cv2.flip(image,1)
     steering_angle = -steering_angle
